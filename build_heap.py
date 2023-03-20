@@ -21,16 +21,8 @@ def sift_down(data, i, swaps):
     return swaps
 
 def main():
-    input_type = input().strip()
-    if input_type == '0':
-        # input from keyboard
-        n = int(input())
-        data = list(map(int, input().split()))
-    else:
-        # input from file
-        with open(input_type, 'r') as f:
-            n = int(f.readline())
-            data = list(map(int, f.readline().split()))
+    n = int(input())
+    data = list(map(int, input().split()))
 
     assert len(data) == n
 
@@ -39,3 +31,6 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+
+if __name__ == "__main__":
+    main()
